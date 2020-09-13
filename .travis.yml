@@ -1,4 +1,6 @@
-sudo: required
+os: linux
+dist: xenial
+language: ruby
 services:
     - docker
 before_install:
@@ -12,7 +14,7 @@ deploy:
     region: "us-east-1"
     app: "docker-react"
     env: "DockerReact-env"
-    bucket_name: "elasticbeanstalk-us-east-1-675489459153"
+    bucket: "elasticbeanstalk-us-east-1-675489459153"
     path: "docker-react"
     on:
         branch: "master"
